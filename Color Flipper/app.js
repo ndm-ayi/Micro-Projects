@@ -1,4 +1,4 @@
-const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
+const colors = ["green", "red", "rgba(133,122,200)", "#f15025", "yellow"];
 let colorIndex = 0;
 let btn = document.getElementById('btn');
 let color = document.querySelector('.color');
@@ -26,6 +26,7 @@ let randomFlipColors = () => {
 
 let getRandomNumber = () => {
     let randomNumber = Math.random();
-    console.log(randomNumber);
-    return Math.floor(randomNumber * colors.length);
+    let randomFlooredNumber =Math.floor(randomNumber * colors.length);
+    console.log(`Random Number: ${randomNumber} - Multiplied Number: ${randomNumber * colors.length} - Floored Number: ${randomFlooredNumber}`);
+    return randomFlooredNumber;
 }
